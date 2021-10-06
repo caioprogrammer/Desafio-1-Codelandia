@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: #f3f5f7;
+    overflow-x: hidden;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    padding: 0 270px;
+
+    @media (max-width:425px) {
+        padding: 0 20px;
+    }
+}
+
+.header {
+    background: linear-gradient( 90deg, var(--blue-dark), var(--blue));
+    padding: 41px 0;
+    &__top {
+        display: flex;
+        font-family: var(--lexend-font);
+        justify-content: space-between;
+
+        h2 a {
+            color: #fff;
+        }
+    }
+    &__input {
+        &-content {
+            align-items: center;
+            display: flex;
+            position: relative;
+            width: 100%; 
+            
+            &::before {
+                bottom: 12px;
+                content: url(/assets/lupa.svg);
+                left: 15px;
+                position: absolute;                           
+            }
+        }
+            input {
+                background: rgba(255,255,255, 0.2);
+                border: none;
+                border-radius: 5px;
+                color: #fff;
+                font-size: 16px;
+                margin-top: 73px;
+                outline: none;
+                padding: 21px;
+                padding-left: 45px;
+                position: relative;
+                width: 100%;
+                
+                &::placeholder {
+                    color: rgba(255,255,255, 0.2);
+                }
+            }
+    }
+}
+
+.blog {
+    margin-top: 100px;
+
+    &__card {
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(19,19,31, 0.05);
+        margin-bottom: 50px;
+        padding: 25px;        
+        width: 100%;
+
+    }
+    &__date {
+        display: flex;
+        justify-content: space-between;
+
+        p {
+            color: var(--text);
+            font-family: var(--lexend-font);
+        }
+    }
+
+    &__title {
+        color: var(--title);
+        font-family: var(--lexend-font);
+        font-size: 26px;
+        margin-bottom: 10px;
+        margin-top: 22px;       
+    }
+
+    &__subtitle {
+        color: var(--text);
+        font-family: var(--lexend-font);
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 32px; 
+    }
+}
+
+
+
+.animate__animated.animate__slideInLeft {
+    --animate-duration: 2s;
+}
+.animate__animated.animate__slideInRight {
+    --animate-duration: 2s;
+}
